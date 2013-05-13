@@ -1,0 +1,72 @@
+﻿<html>
+<head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    
+    <style type="text/css">
+        #menu_container
+        {
+            color: #98887c;
+            text-shadow: 0px 1px rgba(255,255,255,1);
+            font-family: Consolas;
+            position: fixed;
+            top: 30px;
+            left: 10px;
+            padding: 1px 5px 1px 5px;
+            border-color: Gray;
+            border-left-style: solid;
+            border-left-width: 1px;
+            /*
+            border-right-style: solid;
+            border-right-width: 1px; */
+        }
+        #menu_info
+        {
+            background-color: InfoBackground;
+        }
+        #menu_container ul
+        {
+            list-style-type: none;
+            display: inline;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('#menu_container li').mouseover(function () {
+                var description = $(this).attr('meta-description');
+                WriteText(description);
+            });
+        });
+
+        var timers = [];
+        var currentText;
+        function WriteText(text) {
+            if (currentText == text) return;
+            currentText = text;
+
+            //cancel old timers
+            $.each(timers, function (index, item) { clearTimeout(item); });
+            timers = [];
+
+            $('#menu_info').html('');
+            $.each(text, function (index, item) {
+                var idTimer = setTimeout(function () { $('#menu_info').append(item); }, index * 40);
+                timers.push(idTimer);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="menu_container">
+        <ul>
+            <li meta-description="goto Home;">Home</li>
+            <li meta-description="goto devs_tuff.Home; //(aka tumblr home)">Tumblr Home</li>
+            <li meta-description="goto Twitter;">Twitter</li>
+            <li meta-description="Ask(Something);">Ask</li>
+            <li meta-description="SendPost();">Send</li>
+        </ul>
+        <hr />
+        <div id="menu_info">
+        </div>
+    </div>
+</body>
+</html>

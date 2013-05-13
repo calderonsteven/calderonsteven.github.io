@@ -1,0 +1,654 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>{Title}</title>
+    <link rel="shortcut icon" href="{Favicon}" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}" />
+    <meta name="viewport" content="width=550" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- custom colors -->
+    <meta name="color:LinksAndBorder" content="#AB1D09" />
+
+<!-- la magia -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<!-- ;) -->
+
+    <!-- yeah that's it -->
+    <style type="text/css">
+		body {
+			background: #FFFFFF;
+			margin: 0 0 20px 0;
+			padding: 0;
+			color: #222222;
+			font-family: Verdana, Arial, sans-serif;
+			font-size: 11px;
+			line-height: 15px;
+			border-top: 2px solid {color:LinksAndBorder};
+		}
+		
+		iframe {
+			margin: 2px auto auto auto;
+		}
+
+		a {
+			color: #858585;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: #222222;
+		}
+
+		a:active,
+		a:focus {
+			outline: 0;
+		}
+
+		p {
+			margin: 0 auto 10px auto;
+		}
+
+		.clear {
+			clear: both;
+		}
+
+		.spacer {
+			width: 100%;
+			height: 10px;
+			clear: both;
+		}
+
+		#content {
+			width: 522px;
+			margin: 40px auto auto auto;
+			position: relative;
+		}
+
+		#content a.name {
+			color: #98887c;
+            text-shadow: 0px 1px rgba(255,255,255,1);
+            font-family: Consolas;
+            
+			
+			/*font-family: Consolas;*/
+			font-size: 24px;
+			font-weight: bold;
+			letter-spacing: -1px;
+			/*color: #222222;*/
+            text-align: center;
+        }
+
+		#content .description {
+			margin: 7px 0 40px 0;
+            text-align: center;
+        }
+
+		#content .date {
+			color: #636363;
+			font-weight: bold;
+			text-align: center;
+			margin: 0 0 7px 0;
+		}
+
+		#content .post {
+			width: 500px;
+			padding: 10px 10px 0 10px;
+			line-height: 15px;
+			border-radius: 7px;
+		  -moz-border-radius: 7px;
+		  -webkit-border-radius: 7px;
+			border: 1px solid #ADADAD;
+			background: #F7F7F7;
+			margin: 0 0 40px 0;
+		}
+
+		#content .post .title {
+			font-weight: bold;
+			font-size: 12px;
+		}
+
+			#content .post a.title {
+				clear: both;
+				color: #222222;
+				text-decoration: none;
+			}
+
+		#content .post .quote {
+			font-weight: bold;
+			font-style: italic;
+			font-size: 12px;
+		}
+
+			#content .post .byline {
+				text-align: right;
+			}
+
+		#content .post .photo {
+			text-align: center;
+		}
+
+		#content .post .link {
+			width: 376px;
+			font-size: 12px;
+			font-weight: bold;
+			border-radius: 3px;
+		  -moz-border-radius: 3px;
+		  -webkit-border-radius: 3px;
+			border: 1px solid #ADADAD;
+			background: #FFFFFF;
+			float: left;
+			padding: 3px 5px;
+			margin: 0 0 0 0;
+			overflow: hidden;
+		}
+
+			#content .post a.link {
+				color: #222222;
+				text-decoration: none;
+			}
+
+		#content .post .permalink {
+			width: 90px;
+			height: 11px;
+			color: #FFFFFF;
+			font-weight: bold;
+			text-align: center;
+			line-height: 8px;
+			background: {color:LinksAndBorder} url(http://www.petervidani.com/tumblr/timecapsule/img/post-permalink-grad.png) repeat-x;
+			border-radius: 3px;
+		  -moz-border-radius: 3px;
+		  -webkit-border-radius: 3px;
+			border: 1px solid #444444;
+			float: right;
+			padding: 5px;
+			margin: 0px auto 3px 7px;
+		}
+
+		#content .nameChat {
+			font-weight: bold;
+			float: left;
+			margin: auto 10px auto auto;
+		}
+		
+		embed {
+			border: 1px solid #ADADAD;
+			float: left;
+		}
+		
+		.pagination {
+			width: 522px;
+			height: 10px;
+			margin: auto;
+		}
+		
+		.pagination .button {
+			width: 13px;
+			height: 10px;
+		}
+		
+		.pagination a.button.right {
+			float: right;
+			background: #858585 url(http://www.petervidani.com/tumblr/timecapsule/img/nav-right.png) center no-repeat;
+		}
+		
+		.pagination a.button.left {
+			float: right;
+			margin-right: 16px;
+			background: #858585 url(http://www.petervidani.com/tumblr/timecapsule/img/nav-left.png) center no-repeat;
+		}
+		
+		.pagination a.button.left,
+		.pagination a.button.right {
+			border: 0;
+		}
+		
+		.pagination a.button.left:hover {
+			background: #222222 url(http://www.petervidani.com/tumblr/timecapsule/img/nav-left.png) center no-repeat;
+		}		
+		
+		.pagination a.button.right:hover {
+			background: #222222 url(http://www.petervidani.com/tumblr/timecapsule/img/nav-right.png) center no-repeat;
+		}
+		
+		#footer {
+			width: 522px;
+			text-align: right;
+			margin: 40px auto 20px auto;
+			clear: both;
+		}
+		{CustomCSS}
+	</style>
+
+<script>
+        $(document).ready(function () {
+            $('#menu_container li').mouseover(function () {
+                var description = $(this).attr('meta-description');
+                WriteText(description);
+            });
+        });
+
+        var timers = [];
+        var currentText;
+        function WriteText(text) {
+            if (currentText == text) return;
+            currentText = text;
+
+            //cancel old timers
+            $.each(timers, function (index, item) { clearTimeout(item); });
+            timers = [];
+
+            $('#menu_info').html('');
+            $.each(text, function (index, item) {
+                var idTimer = setTimeout(function () { $('#menu_info').append(item); }, index * 40);
+                timers.push(idTimer);
+            });
+        }
+</script>
+ 
+    <style type="text/css">
+        #menu_container
+        {
+            color: #98887c;
+            text-shadow: 0px 1px rgba(255,255,255,1);
+            font-family: Consolas;
+            position: fixed;
+            top: 30px;
+            left: 10px;
+            padding: 1px 5px 1px 5px;
+            border-color: Gray;
+            border-left-style: solid;
+            border-left-width: 1px;
+            /*
+            border-right-style: solid;
+            border-right-width: 1px; */
+        }
+        #menu_info
+        {
+            background-color: InfoBackground;
+        }
+        #menu_container ul
+        {
+            list-style-type: none;
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+<!-- (|_|) Menu-->
+<div id="menu_container">
+        <ul>
+            <li meta-description="goto Home;">Home</li>
+            <li meta-description="goto devs_tuff.Home; //(aka tumblr home)">Tumblr Home</li>
+            <li meta-description="goto Twitter;">Twitter</li>
+            <li meta-description="Ask(Something);">Ask</li>
+            <li meta-description="SendPost();">Send</li>
+        </ul>
+        <hr />
+        <div id="menu_info">
+        </div>
+    </div>
+<!-- (|_|) /Menu-->
+
+    <div id="content">
+        <!-- Mod Paco Pistolas -->
+        <a class="name" href="/">{Title}</a>
+        <div class="description">
+            {block:Description}{Description}{/block:Description}</div>
+        {block:Posts} {block:NewDayDate}
+        <div class="date">
+            {Month} {DayOfMonth}, {Year}
+        </div>
+        {/block:NewDayDate} {block:Photo}
+        <div class="post">
+            <div class="photo">
+                {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}">{LinkCloseTag}</div>
+            <div class="spacer">
+            </div>
+            <a class="permalink" href="{Permalink}">{12Hour}:{Minutes} {AmPm}</a> {block:Caption}{Caption}{/block:Caption}
+            <div class="spacer">
+            </div>
+        </div>
+        {/block:Photo} {block:Video}
+        <div class="post">
+            {Video-500}
+            <div class="spacer">
+            </div>
+            <a class="permalink" href="{Permalink}">{12Hour}:{Minutes} {AmPm}</a> {block:Caption}{Caption}{/block:Caption}
+            <div class="spacer">
+            </div>
+        </div>
+        {/block:Video} {block:Audio}
+        <div class="post">
+            <a class="permalink" href="{Permalink}">{12Hour}:{Minutes} {AmPm}</a> {AudioPlayerWhite}&nbsp;&nbsp;{block:ExternalAudio}<a
+                href="{ExternalAudioURL}">Download</a>{/block:ExternalAudio}
+            <div class="spacer">
+            </div>
+            {block:Caption}{Caption}{/block:Caption}
+            <div class="spacer">
+            </div>
+        </div>
+        {/block:Audio} {block:Link}
+        <div class="post">
+            <a class="link" href="{URL}" target="{Target}">{Name} &#8594;</a> <a class="permalink"
+                href="{Permalink}">{12Hour}:{Minutes} {AmPm}</a>
+            <div class="spacer">
+            </div>
+            {block:Description} {Description} {/block:Description}
+            <div class="spacer">
+            </div>
+        </div>
+        {/block:Link} {block:Quote}
+        <div class="post">
+            <a class="permalink" href="{Permalink}">{12Hour}:{Minutes} {AmPm}</a>
+            <div class="quote">
+                {Quote}</div>
+            {block:Source}<div class="byline">
+                &mdash; {Source}</div>
+            {/block:Source}
+            <div class="spacer">
+            </div>
+        </div>
+        {/block:Quote} {block:Text}
+        <div class="post">
+            <a class="permalink" href="{Permalink}">{12Hour}:{Minutes} {AmPm}</a> {block:Title}
+            <div class="title">
+                {Title}</div>
+            {/block:Title} {Body}
+            <div class="spacer">
+            </div>
+        </div>
+        {/block:Text} {block:Chat}
+        <div class="post">
+            <a class="permalink" href="{Permalink}">{12Hour}:{Minutes} {AmPm}</a> {block:Title}
+            <div class="title">
+                {Title}</div>
+            {/block:Title} {block:Lines} {block:Label}<div class="nameChat">
+                {Label}
+            </div>
+            {/block:Label} {Line}<br />
+            {/block:Lines}
+            <div class="spacer">
+            </div>
+        </div>
+        {/block:Chat} {/block:Posts}
+    </div>
+    {block:Pagination}
+    <div class="pagination">
+        {CurrentPage} / {TotalPages} {block:NextPage} <a class="button right" href="{NextPage}">
+        </a>{/block:NextPage} {block:PreviousPage} <a class="button left" href="{PreviousPage}">
+        </a>{/block:PreviousPage}
+    </div>
+    {/block:Pagination} {block:PermalinkPagination}
+    <div class="pagination">
+        {block:PreviousPost} <a class="button right" href="{PreviousPost}"></a>{/block:PreviousPost}
+        {block:NextPost} <a class="button left" href="{NextPost}"></a>{/block:NextPost}
+    </div>
+    {/block:PermalinkPagination}
+    <div id="footer">
+    </div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+	<script type="text/javascript" src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js"></script>
+
+	<script type="text/javascript">
+
+	
+
+		// indexOf prototype
+
+		// http://stackoverflow.com/questions/143847/best-way-to-find-an-item-in-a-javascript-array#144172
+
+		if (!Array.prototype.indexOf) {
+
+			Array.prototype.indexOf = function (obj, fromIndex) {
+
+				if (fromIndex == null) {
+
+					fromIndex = 0;
+
+				} else if (fromIndex < 0) {
+
+					fromIndex = Math.max(0, this.length + fromIndex);
+
+				}
+
+				for (var i = fromIndex, j = this.length; i < j; i++) {
+
+					if (this[i] === obj)
+
+					return i;
+
+				}
+
+				return -1;
+
+			};
+
+		}
+
+
+
+		// fade function for search field
+
+		$('#searchbox').fadeTo(0, .35)
+
+			.bind('mouseenter', function(){
+
+				if(!$(this).data('stopfade'))
+
+					$(this).fadeTo('fast', 1);
+
+			})
+
+			.bind('mouseleave', function(){
+
+				if(!$(this).data('stopfade'))
+
+					$(this).fadeTo('fast', .35);
+
+			})
+
+			.find('input[type="text"]')
+
+				.bind('focus', function(){
+
+					$('#searchbox').data('stopfade', true);
+
+				})
+
+				.bind('blur', function(){
+
+					$('#searchbox').data('stopfade', false).trigger('mouseleave');
+
+				});
+
+								
+
+		// remove post deliminator on last post
+
+		$('.postblock:last .post').css('border', 0);
+
+			
+
+
+
+		// DOM fully available...
+
+		$(function(){
+
+			// show / hide tumblr controls
+
+			$('#tumblr_controls').fadeTo(0, .15).hover(
+
+				function(){ $(this).fadeTo('fast', 1); },
+
+				function(){ $(this).fadeTo('fast', .15); }
+
+			);
+
+		
+
+			// load necessary syntax highlighter brushes
+
+			if($('.post pre').length){
+
+				var shBaseURL = 'http://alexgorbatchev.com/pub/sh/current/scripts/';
+
+				var shBrushScripts = {
+
+					'as3':		'shBrushAS3.js',
+
+					'bash':		'shBrushBash.js',
+
+					'shell':	'shBrushBash.js',
+
+					'cpp':		'shBrushCpp.js',
+
+					'css':		'shBrushCss.js',
+
+					'diff':		'shBrushDiff.js',
+
+					'patch':	'shBrushDiff.js',
+
+					'jscript':	'shBrushJScript.js',
+
+					'js':		'shBrushJScript.js',
+
+					'perl':		'shBrushPerl.js',
+
+					'pl':		'shBrushPerl.js',
+
+					'php':		'shBrushPhp.js',
+
+					'plain':	'shBrushplain.js',
+
+					'text':		'shBrushplain.js',
+
+					'python':	'shBrushPython.js',
+
+					'py':		'shBrushPython.js',
+
+					'ruby':		'shBrushRuby.js',
+
+					'rails':	'shBrushRuby.js',
+
+					'sql':		'shBrushSql.js',
+
+					'xml':		'shBrushXml.js',
+
+					'xhtml':	'shBrushXml.js',
+
+					'html':		'shBrushXml.js',
+
+					'xslt':		'shBrushXml.js'
+
+				};
+
+				var shTotalScripts = [];
+
+				var shLoadedScripts = 0;
+
+				// find any existing script tags in need of syntax highlighting
+
+				$('.post pre').each(function(){
+
+					var found = /brush:\s+(\w+)/.exec($(this).attr('class'));
+
+					// test that the tag has a brush attribute
+
+					if(found != null && found.length > 1){
+
+						var brush = found[1];
+
+						// add it to includes array if it's not already in there
+
+						if(
+
+							typeof(shBrushScripts[brush]) != 'undefined' &&
+
+							shTotalScripts.indexOf(shBrushScripts[brush]) == -1
+
+						){
+
+							// escape any HTML elements within this code block
+
+							//$(this).html($(this).html().replace(/</g, '&lt;'));
+
+							//$(this).html($(this).html().replace(/>/g, '&gt;'));
+
+							// add brush url to include holder
+
+							shTotalScripts.push(shBrushScripts[brush]);
+
+						}
+
+					}
+
+				});
+
+				if(shTotalScripts.length){
+
+					// include each brush script
+
+					for(var i = 0, j = shTotalScripts.length; i < j; i++){
+
+						$.getScript(shBaseURL + shTotalScripts[i], function(){
+
+							// mark down this brush as loaded
+
+							shLoadedScripts++;
+
+							// if we've got all the brushes loaded, highlight the page
+
+							if(shLoadedScripts > 0 && shLoadedScripts == shTotalScripts.length){
+
+								SyntaxHighlighter.config.strings.alert = '';
+
+								SyntaxHighlighter.config.clipboardSwf = 'http://alexgorbatchev.com/pub/sh/current/scripts/clipboard.swf';
+
+								SyntaxHighlighter.defaults['smart-tabs'] = true;
+
+								SyntaxHighlighter.defaults['gutter'] = false;
+
+								SyntaxHighlighter.defaults['class-name'] = 'syntaxhighlighted';
+
+								SyntaxHighlighter.defaults['wrap-lines'] = false;
+
+								SyntaxHighlighter.all();
+
+							}
+
+						});
+
+					}
+
+				}
+
+			}
+
+		});
+
+		
+
+		// Page+images fully loaded...
+
+		$(window).ready(function(){
+
+			// change any photos in text posts to have photoblock wrapper
+
+			$('.postblock .text img').each(function(){
+
+				if(parseInt($(this).attr('width')) > 490) $(this).wrap('<div class="photoblock"></div>');
+
+			});		
+
+		});
+
+		
+
+	</script>
+
+
+</body>
+</html>

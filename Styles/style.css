@@ -1,0 +1,39 @@
+body, html {
+    margin: 0px;
+    padding: 0px;
+}
+#container {
+    /*background-color: #660066;*/
+    padding: 8px;
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    left: 0px;
+    right: 0px;    
+}
+#header {
+    background-color: #12b200;
+}
+#viewportContent {
+    background-color: #ffcf12;
+    width: 79.5%;
+    position: fixed;
+    left: 8px;
+    bottom: 29px;
+    top: 29px;    
+}
+#content {
+    background-color: #d32000;
+    width: 20%;
+    position: fixed;
+    right: 8px;
+    bottom: 29px;
+    top: 29px;
+}
+#footer {
+    background-color: #008194;
+    position: absolute;    
+    bottom: 8px;
+    right: 8px;
+    left: 8px;    
+}
