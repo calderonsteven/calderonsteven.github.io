@@ -1,4 +1,6 @@
-﻿(function ($) {
+﻿var sys;
+
+(function ($) {
     var timers = [];
     var currentText;
     function WriteText(text) {
@@ -10,8 +12,8 @@
         timers = [];
 
         $('#action_description').html('');
-        $.each(text, function (index, item) {
-            var idTimer = setTimeout(function () { $('#action_description').append(item); }, index * 40);
+        $.each(text.split(" "), function (index, item) {
+            var idTimer = setTimeout(function () { $('#action_description').append(item+" "); }, index * 40);
             timers.push(idTimer);
         });
     }
@@ -39,23 +41,18 @@
                 particleSystem.screenPadding(80) // leave an extra 80px of whitespace per side
 
 				//debugger;
-                //$(window).resize(that.resize)
-				$('#viewportContent').resize(function(){
-					debugger;					
-				});
-                that.resize()
+                $(window).resize(that.resize)
+				that.resize()
 
                 // set up some event handlers to allow for node-dragging
                 that.initMouseHandling()
             },
 
             resize: function () {
+                //debugger;
                 canvas.width = /* .80 * */$('#viewportContent').width()
                 canvas.height = /* .80 * */$('#viewportContent').height()
                 particleSystem.screen({ size: { width: canvas.width, height: canvas.height} })
-
-                //console.log('canvas.width:' + canvas.width + ', canvas.height: ' + canvas.height);
-                //console.log('$(window).width():' + $(window).width() + ', $(window).height(): ' + $(window).height());
 
                 that.redraw()
             },
@@ -126,6 +123,7 @@
                 // for moves and mouseups while dragging
                 var handler = {
                     moved: function (e) {
+                        //debugger;
                         var pos = $(canvas).offset();
                         var mousePosition = arbor.Point(e.pageX - pos.left, e.pageY - pos.top)
                         var nearest = particleSystem.nearest(mousePosition);
@@ -144,15 +142,16 @@
                         });
 
                         //show nodes from master node
+                        //console.log(nearest.node.name);
                         if ($.inArray(nearest.node.name, ['me', 'apps', 'write']) >= 0) {
                             $.each(particleSystem.getEdgesFrom(nearest.node.name), function (index, value) {
                                 //console.log(nearest.node.name);
                                 lastnode = value.source.name;
                                 particleSystem.tweenNode(value.target, .5, { alpha: 1 })
 
-                                value.target.p.x = value.source.p.x + .05 * Math.random() - .025
-                                value.target.p.y = value.source.p.y + .05 * Math.random() - .025
-                                value.target.tempMass = .001
+                                value.target.p.x = value.source.p.x + .05 * Math.random() - .025;
+                                value.target.p.y = value.source.p.y + .05 * Math.random() - .025;
+                                value.target.tempMass = .001;
                             });
                         }
 
@@ -162,6 +161,11 @@
                         var pos = $(canvas).offset();
                         _mouseP = arbor.Point(e.pageX - pos.left, e.pageY - pos.top)
                         dragged = particleSystem.nearest(_mouseP);
+
+                        console.log(e);
+                        //navigate to the page
+                        $("#content iframe").attr("src", "http://hascanvas.com/Steven-Calderon");
+                        $('#content').mouseover()
 
                         if (dragged && dragged.node !== null) {
                             // while we're dragging, don't let physics move the node
@@ -201,6 +205,7 @@
                 $(canvas).mousedown(handler.clicked);
                 $(canvas).mousemove(handler.moved);
 
+                //$(window).resize(that.resize);
             } //,
 
         }
@@ -208,7 +213,7 @@
     }
 
     $(document).ready(function () {
-        var sys = arbor.ParticleSystem(1000, 600, 0.5) // create the system with sensible repulsion/stiffness/friction
+        sys = arbor.ParticleSystem(1000, 600, 0.5) // create the system with sensible repulsion/stiffness/friction
         sys.parameters({ gravity: true }) // use center-gravity to make the graph settle nicely (ymmv)
         sys.renderer = Renderer("#viewport") // our newly created renderer will have its .init() method called shortly by sys...
 

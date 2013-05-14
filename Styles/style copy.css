@@ -1,6 +1,7 @@
 body, html {
     margin: 0px;
     padding: 0px;
+    font-family: consolas;
 }
 #container {
     /*background-color: #660066;*/
