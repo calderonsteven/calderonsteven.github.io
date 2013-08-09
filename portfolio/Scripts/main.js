@@ -164,7 +164,9 @@
 
                         console.log(e);
                         //navigate to the page
-                        $("#content iframe").attr("src", "http://hascanvas.com/Steven-Calderon");
+                        //$("#content iframe").attr("src", "http://hascanvas.com/Steven-Calderon");
+                        $("#content iframe").attr("src", "http://www.openprocessing.org/user/25587");
+                        
                         $('#content').mouseover()
 
                         if (dragged && dragged.node !== null) {

@@ -35,22 +35,28 @@ body, html {
     
 }
 #viewportContent {
-    background-color: #ffcf12;
+    /*background-color: #ffcf12;*/
     position: fixed;
     left: 8px; 
     top: 70px; 
     bottom: 26px;
-    width: 76%;
+    /*width: 76%;*/
+    width: 100%;
     
     /* -webkit-box-shadow: 2px 5px 15px #555; */
     line-height: 18px;
 }
 #content {
-    background-color: #BF0603;/*#d32000;*/
+    /*background-color: #BF0603;*/
     position: fixed;
     right: 8px; top: 70px; bottom: 26px;    
     width: 21%;
 }
+
+#content iframe{
+  border: 0;
+}
+
 #footer {
     background-color: white;
     
