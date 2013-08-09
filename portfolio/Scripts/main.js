@@ -229,17 +229,17 @@
                 "{ main }": { color: "red", shape: "dot", alpha: 1 },
 
                 apps: { color: CLR.branch, shape: "triangle", alpha: 1 },
-                art: { color: CLR.apps, shape: "rect", alpha: 0, description: 'Generative art & some Algorithmic art.' },
-                "4fun": { color: CLR.apps, shape: "rect", alpha: 0, description: 'Coding 4 fun & some fun coding stuff.' },
+                art: { color: CLR.apps, shape: "rect", alpha: 0, description: 'Generative art, algorithmic art, and a lot of proceesing code' },
+                "4fun": { color: CLR.apps, shape: "rect", alpha: 0, description: 'Coding 4 fun & some coding stuff.' },
 
                 write: { color: CLR.branch, shape: "triangle", alpha: 1 },
                 tumblr: { color: CLR.write, shape: "rect", alpha: 0, description: 'tumblr_blog = [re_posts, news, code]' },
-                blog: { color: CLR.write, shape: "rect", alpha: 0, description: 'personal_blog = [things, and more shit]' },
+                blog: { color: CLR.write, shape: "rect", alpha: 0, description: 'personal_blog = [personal things]' },
 
                 me: { color: CLR.branch, shape: "triangle", alpha: 1 },
                 "about": { color: CLR.me, shape: "rect", alpha: 0, description: 'Things about me and my work' },
                 contact: { color: CLR.me, shape: "rect", alpha: 0, description: 'Contant me ლ(╹◡╹ლ)' },
-                social: { color: CLR.me, shape: "rect", alpha: 0, description: 'Get Social w/ me' }
+                social: { color: CLR.me, shape: "rect", alpha: 0, description: 'Get Social with me' }
             },
             edges: {
                 "{ main }": {

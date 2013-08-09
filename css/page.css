@@ -1,0 +1,44 @@
+﻿#harmony canvas
+{
+    z-index: 0;
+    height: 95%;
+    width: 100%;
+}
+
+#helvetica-demo{
+    position: fixed;
+    width: 641px;
+    bottom: 5px;
+    left: 45px;
+}
+
+#sayhello{
+    font-family: consolas;
+    height: 180px;
+    width: 700px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    margin-left: -350px;
+    top: 50%;
+    margin-top: -90px;
+    /*border: 1px solid black;*/
+}
+
+#desc{
+    font-size: 14px;
+    display: block;
+}
+
+#name{
+    color: #1374C0;
+}
+
+#caption{
+    font-size: 40px;
+    transition: all .3s ease .3s;
+}
+
+.do-opacity{
+    opacity: 0.1;
+}

@@ -1,0 +1,116 @@
+body {
+  font-family: consolas;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  text-shadow: none;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.2;
+  background-color: #FFF;
+}
+
+body, html {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    background-color: white;
+}
+
+#header {
+    position :fixed;
+    left: 8px; top: 8px; right: 8px;
+    height: 40px;    
+    
+    /* -webkit-box-shadow: 2px 5px 15px #555; */
+    /* border-radius: 5px; */
+    line-height: 20px;
+    
+    background-color: white;
+    color: black;    
+    padding: 0 10px;
+
+    
+}
+#viewportContent {
+    background-color: #ffcf12;
+    position: fixed;
+    left: 8px; 
+    top: 70px; 
+    bottom: 26px;
+    width: 76%;
+    
+    /* -webkit-box-shadow: 2px 5px 15px #555; */
+    line-height: 18px;
+}
+#content {
+    background-color: #BF0603;/*#d32000;*/
+    position: fixed;
+    right: 8px; top: 70px; bottom: 26px;    
+    width: 21%;
+}
+#footer {
+    background-color: white;
+    
+    position: fixed;    
+    bottom: 2px; right: 9px; left: 9px;        
+    
+    /*-webkit-box-shadow: 2px 5px 15px #555;*/
+    border-radius: 3px;
+    font-size: 12px;
+}
+#site_tittle {
+    /*font-weight: bold;*/
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+#action_description
+{
+    text-shadow: 0.5px 0.5px gray;
+    display: block;
+}
+
+/*debug*/
+nav{
+  display: inline-block !important;
+  padding-right: 10px;
+}
+
+.circulo{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: white;
+  text-shadow: 0.1em 0.1em 0.2em white;
+  padding-top: 21px;
+  padding-left: 3px;
+  text-align: center;
+  cursor: pointer;
+
+  background-color: #fff;
+  border: 1px solid #3E5DAA;
+  transition: all .3s ease .3s;
+}
+
+.circulo a{
+  text-decoration: none;
+  color: #3E5DAA;
+}
+
+.circulo:hover{
+  border: 1px solid #446FB4;
+}
+
+.cn-button:hover{
+  color: #446FB4;
+}
+
+#porfolio-container{
+  /*visibility: hidden;*/
+}
