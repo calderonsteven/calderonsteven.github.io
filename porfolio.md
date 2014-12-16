@@ -4,6 +4,7 @@ This is a list of Projects that I have worked on and currently really like a lot
 
 ### About me
 - http://github.com/calderonsteven
+- http://codepen.io/calderonsteven/
 - http://calderonsteven.github.io/
 > main personal site
 - http://pacopistolas.divshot.io/
