@@ -17,7 +17,7 @@ This is a list of Projects that I have worked on and currently really like a lot
 - http://bit.ly/1uPxU7F
 > LISP trivial interpreter
 
-### art+code
+### Art+Code
 - http://drawashape.parseapp.com
 > generative and colaborative draw tool
 - http://studio.sketchpad.cc/sp/padlist/edited-by?editorId=8846
@@ -50,15 +50,15 @@ This is a list of Projects that I have worked on and currently really like a lot
 - http://rutalalibertad.com
 > website for a close friend who travels across latin america in his motorcycle
 
-### using wordpress as cms
+### Using wordpress as CMS
 - http://ambulante.com.co/
 - http://balconesdelariari.com/
 
-### ecommerce
+### Ecommerce
 - http://papeldepunto.com/beta
 - http://juan.com.co
 
-### social feeds
+### Social feeds
 - https://syou.com/es/live-feed 
 > social feed for all social networks of syou's team
 - https://appsmccann.com/TruthAboutStreet/
