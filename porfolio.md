@@ -1,6 +1,6 @@
 #This is like a portfolio
 
-This is a list of projects what i worked and currently really like a lot :) enjoy it as i did.
+This is a list of projects what i worked and currently really like a lot :) Hope you enjoy it as much as I did.
 
 ### About me
 - http://github.com/calderonsteven
