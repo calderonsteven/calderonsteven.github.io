@@ -59,7 +59,8 @@ This is a list of Projects that I have worked on and currently really like a lot
 - http://juan.com.co
 
 ### social feeds
-- https://syou.com/es/live-feed
+- https://syou.com/es/live-feed 
+> social feed for all social networks of syou's team
 - https://appsmccann.com/TruthAboutStreet/
-> social feed for a social experiment in mccann ericson colombia
+> social feed for a social experiment in mccann erickson colombia
 
