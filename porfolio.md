@@ -1,6 +1,6 @@
 #This is like a portfolio
 
-This is a list of projects what i worked and currently really like a lot :) Hope you enjoy it as much as I did.
+This is a list of Projects that I have worked on and currently really like a lot :) Hope you enjoy it as much as I did.
 
 ### About me
 - http://github.com/calderonsteven
@@ -33,15 +33,15 @@ This is a list of projects what i worked and currently really like a lot :) Hope
 - https://apps.facebook.com/diloconcafe/
 > contest for federación de cafeteros de Colombia
 - http://capitales.divshot.io/
-> personal project, capitales is a game for learn geography
+> personal project, **capitales** is a game to learn geography
 - http://calderonsteven.github.io/coolebro/site/index.html
 > a mix between snake and tron 
 - http://calderonsteven.github.io/cool-chemistry/
 > chemistry reactions calculator
 - http://bit.ly/1qTh0si
-> FingerRace: mini game for mobile, use firebase.js and processingjs
+> **FingerRace**: mini game for mobile, use firebase.js and processingjs
 - http://bit.ly/1zhDuEZ
-> MIDI master: can you remember the secuence?
+> **MIDI master**: can you remember the secuence?
 
 ### Using video
 - http://rickshawstories.com
