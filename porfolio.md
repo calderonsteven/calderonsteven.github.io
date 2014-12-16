@@ -33,7 +33,7 @@ This is a list of Projects that I have worked on and currently really like a lot
 - https://apps.facebook.com/diloconcafe/
 > contest for federación de cafeteros de Colombia
 - http://capitales.divshot.io/
-> personal project, **capitales** is a game to learn geography
+> **Capitales**:  a game to learn geography
 - http://calderonsteven.github.io/coolebro/site/index.html
 > a mix between snake and tron 
 - http://calderonsteven.github.io/cool-chemistry/
